@@ -1,8 +1,33 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <meta http-equiv="content-type" charset="utf-8">
+    <script type="text/javascript" src="index.js"></script>
   </head>
 
   <body>
+    <h1>ToDoリスト</h1>
+    <div class="divDispTasksSwitch">
+      <input type="radio" name="dispTasks" checked="checked" />すべて
+      <input type="radio" name="dispTasks" />作業中
+      <input type="radio" name="dispTasks" />完了
+    </div>
+    <div class="divOutput">
+      <table>
+        <thead>
+          <th>ID</th>
+          <th>コメント</th>
+          <th>状態</th>
+        </thead>
+        <tbody id="tbodyTasks">
+        </tbody>
+      </table>
+    </div>
+
+    <h1>タスクの新規追加</h1>
+    <div class="divInput">
+      <input type="text" id="textInputTask"/>
+      <input type="button" id="btnAddTask" value="追加" />
+    </div>
   </body>
 </html>
