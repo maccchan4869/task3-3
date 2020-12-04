@@ -9,12 +9,13 @@ window.onload = () => {
   
   // 追加ボタン押下時の処理
   btnAddTask.addEventListener('click', () => {
+    const inputTask = document.getElementById('textInputTask');
     tasks.push({
-      content: document.getElementById('textInputTask').value,
+      content: inputTask.value,
       status: taskStatus.working
     });
     dispTask();
-    document.getElementById('textInputTask').value = '';
+    inputTask.value = '';
   });
 
   /**
